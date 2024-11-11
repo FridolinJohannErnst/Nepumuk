@@ -1,0 +1,3 @@
+[submodule "Nepumuk/vendor/spdlog"]
+	path = Nepumuk/vendor/spdlog
+	url = https://github.com/gabime/spdlog
