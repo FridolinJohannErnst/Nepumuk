@@ -27,9 +27,15 @@
     <ClInclude Include="src\Nepumuk\EntryPoint.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="src\Nepumuk\Log.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Nepumuk\Application.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Nepumuk\Log.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
