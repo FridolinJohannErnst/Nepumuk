@@ -1,6 +1,6 @@
 workspace "Nepumuk"
 	architecture "x64"
-
+	startproject "Sandbox"
 	configurations
 	{
 		"Debug",
@@ -10,6 +10,12 @@ workspace "Nepumuk"
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
+-- Include directories relative to root folder (solution directory)
+IncludeDir = {}
+IncludeDir["GLFW"] = "Nepumuk/vendor/GLFW/include"
+
+include "Nepumuk/vendor/GLFW"
+
 project "Nepumuk"
 	location "Nepumuk"
 	kind "SharedLib"
@@ -17,6 +23,9 @@ project "Nepumuk"
 
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
+
+	pchheader "nkpch.h"
+	pchsource "Nepumuk/src/nkpch.cpp"
 
 	files
 	{
@@ -26,11 +35,20 @@ project "Nepumuk"
 
 	includedirs
 	{
-		"%{prj.name}/vendor/spdlog/include"
+		"%{prj.name}/src",
+		"%{prj.name}/vendor/spdlog/include",
+		"%{IncludeDir.GLFW}"
+	}
+
+	links
+	{
+		"GLFW",
+		"opengl32.lib",
+		"dwmapi.lib"
 	}
 
 	filter "system:windows"
-		cppdialect "C++17"
+		cppdialect "C++latest"
 		staticruntime "On"
 		systemversion "latest"
 

@@ -4,6 +4,15 @@
     <Filter Include="Nepumuk">
       <UniqueIdentifier>{AAE7C36B-16C7-4207-1FDF-CDDD8B3DA968}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Nepumuk\Events">
+      <UniqueIdentifier>{4E10A748-3ADE-9A4E-2372-0B750FDF76B3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platform">
+      <UniqueIdentifier>{2AC788B4-1694-E3BF-3FAD-D1672BD9184E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platform\Windows">
+      <UniqueIdentifier>{64FBD71A-50F4-F66C-7926-DCF1657ED678}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Nepumuk.h" />
@@ -16,9 +25,28 @@
     <ClInclude Include="src\Nepumuk\EntryPoint.h">
       <Filter>Nepumuk</Filter>
     </ClInclude>
+    <ClInclude Include="src\Nepumuk\Events\ApplicationEvent.h">
+      <Filter>Nepumuk\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Nepumuk\Events\Event.h">
+      <Filter>Nepumuk\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Nepumuk\Events\KeyEvent.h">
+      <Filter>Nepumuk\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Nepumuk\Events\MouseEvent.h">
+      <Filter>Nepumuk\Events</Filter>
+    </ClInclude>
     <ClInclude Include="src\Nepumuk\Log.h">
       <Filter>Nepumuk</Filter>
     </ClInclude>
+    <ClInclude Include="src\Nepumuk\Window.h">
+      <Filter>Nepumuk</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Platform\Windows\WindowsWindow.h">
+      <Filter>Platform\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="src\nkpch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Nepumuk\Application.cpp">
@@ -27,5 +55,9 @@
     <ClCompile Include="src\Nepumuk\Log.cpp">
       <Filter>Nepumuk</Filter>
     </ClCompile>
+    <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp">
+      <Filter>Platform\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="src\nkpch.cpp" />
   </ItemGroup>
 </Project>

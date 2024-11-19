@@ -1,3 +1,6 @@
 [submodule "Nepumuk/vendor/spdlog"]
 	path = Nepumuk/vendor/spdlog
 	url = https://github.com/gabime/spdlog
+[submodule "Nepumuk/vendor/GLFW"]
+	path = Nepumuk/vendor/GLFW
+	url = https://github.com/TheCherno/GLFW
